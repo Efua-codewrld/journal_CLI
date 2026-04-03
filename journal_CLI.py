@@ -12,10 +12,12 @@ while True:
         Date = now.strftime("%d/%m/%Y, %H:%M:%S")
 
         journal_entry = input("log in today's journal entry: ")
+        if len (journal_entry)<1:
+            print("Dearest gentle reader, where is today;s gist session?")
         Mood=input("Okay baddie, what's the mood for today: ")
         print("Today's yap session be looking like: ",journal_entry)
         with open(current_file + ".txt","a") as f:
-            f.write( f" {Date} | MOOD {Mood} | {journal_entry}\n")
+            f.write( f"\nDate: {Date}\nMOOD: {Mood}\nEntry: {journal_entry}\n")
 
     if choice == "2":
         filename = input("Enter file name to view: ")
