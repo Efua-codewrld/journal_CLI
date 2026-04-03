@@ -2,7 +2,7 @@ from datetime import datetime
 #setting a standard variable to hold the entry as the file incase no file has been set
 current_file = None
 while True:
-    choice = input("1. Add entry\n2. View entries\n3. change file\n4. Exit\nchoose: ")
+    choice = input("1. Add entry\n2. View entries\n3. change file\n4. Exit\nWhat do you want to do?: ")
 
     if choice == "1":
         if current_file is None:
