@@ -2,7 +2,7 @@ from datetime import datetime
 #setting a standard variable to hold the entry as the file incase no file has been set
 current_file = None
 while True:
-    choice = input("1. Add entry\n2. View entries\n3. change file\n4. Exit\nchoose: ")
+    choice = input("1. Add\n2. View\n3. change file\n4. Exit\npick an option:) : ")
 
     if choice == "1":
         if current_file is None:
@@ -12,12 +12,10 @@ while True:
         Date = now.strftime("%d/%m/%Y, %H:%M:%S")
 
         journal_entry = input("log in today's journal entry: ")
-        if len (journal_entry)<1:
-            print("Dearest gentle reader, where is today;s gist session?")
         Mood=input("Okay baddie, what's the mood for today: ")
         print("Today's yap session be looking like: ",journal_entry)
         with open(current_file + ".txt","a") as f:
-            f.write( f"\nDate: {Date}\nMOOD: {Mood}\nEntry: {journal_entry}\n")
+            f.write( f" {Date} | MOOD {Mood} | {journal_entry}\n")
 
     if choice == "2":
         filename = input("Enter file name to view: ")
