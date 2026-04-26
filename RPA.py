@@ -1,3 +1,11 @@
+import json
+import os
+
+Entries = []
+#load existing data if the file exists
+if os.path.exists("Books.json"):
+    with open("Books.json","r") as f:
+        Entries=json.load(f)
 Entries = list()
 def get_non_empty_input(prompt):
     while True:
@@ -33,6 +41,10 @@ while True:
     if choice.lower()=="no":
         break
 print("you've read:",len(Entries),"book(s) in total")
+
+#save entries to file
+with open("Books.json","w")as f:
+    json.dump(Entries,f)
 
 pages = list()
 for item in Entries:
