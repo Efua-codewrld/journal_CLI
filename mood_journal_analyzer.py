@@ -6,10 +6,11 @@ else:
     e_file = open(filename,"a")
     
     while True:
-        journal_entry = input("Spill the teaaaa: ")
+        journal_entry = input("Spill the Giatttt: ")
 
         if journal_entry.uppercase()=="QUIT":
             break
         with open(filename,"a") as e_file:
             e_file.write (journal_entry + "\n")
     print(f"All entries saved to {filename}.")
+    #Edited on github
