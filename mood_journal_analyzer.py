@@ -6,7 +6,7 @@ else:
     e_file = open(filename,"a")
     
     while True:
-        journal_entry = input("Write your journal entry: ")
+        journal_entry = input("Spill the teaaaa: ")
 
         if journal_entry.uppercase()=="QUIT":
             break
